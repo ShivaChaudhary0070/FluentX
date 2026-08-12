@@ -16,3 +16,33 @@ h2,
 h3 {
   font-family: "Sora", sans-serif;
 }
+.floating-word {
+  position: absolute;
+  color: rgba(255,255,255,0.08);
+  font-weight: 700;
+  user-select: none;
+  animation: floatFade linear infinite;
+  white-space: nowrap;
+}
+
+@keyframes floatFade {
+
+  0%{
+    opacity:0;
+    transform:translateY(40px) scale(.8);
+  }
+
+  20%{
+    opacity:.25;
+  }
+
+  50%{
+    opacity:.15;
+  }
+
+  100%{
+    opacity:0;
+    transform:translateY(-140px) scale(1.1);
+  }
+
+}
